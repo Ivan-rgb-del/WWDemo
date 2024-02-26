@@ -14,7 +14,7 @@ namespace WWDemo.Application.Products.Queries.GetAllProducts
             _productRepository = productRepository;
             _mapper = mapper;
         }
-
+         
         public async Task<List<DTOs.ProductRepresentation>> Handle(GetAllProductsQuery query, CancellationToken cancellationToken)
         {
             var products = await _productRepository.GetAllProducts();
